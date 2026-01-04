@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost Artifacts</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Instructions Screen -->
+        <div id="instructions">
+            <h2>Quest for the Lost Artifacts</h2>
+            <div class="content">
+                <p><strong>Objective:</strong> Collect all 3 golden artifacts and defeat all 3 enemies!</p>
+                <p style="margin-top: 15px;"><strong>Controls:</strong></p>
+                <ul>
+                    <li>🖱️ Mouse - Look Around (Free View)</li>
+                    <li>🖱️ Left Click - Attack</li>
+                    <li>🎮 W/A/S/D - Move</li>
+                    <li>⚠️ Click on screen to lock mouse</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>Tips:</strong></p>
+                <ul>
+                    <li>✨ Artifacts glow golden and spin</li>
+                    <li>👹 Enemies are red and will chase you</li>
+                    <li>❤️ Avoid damage - you have 100 HP</li>
+                </ul>
+            </div>
+            <button id="start-btn">Start Adventure</button>
+        </div>
+
+        <!-- HUD (Heads-Up Display) -->
+        <div id="hud" class="hidden">
+            <div id="health">❤️ Health: 100/100</div>
+            <div id="artifacts">✨ Artifacts: 0/3</div>
+            <div id="enemies">👹 Enemies: 3/3</div>
+        </div>
+
+        <!-- Status Message -->
+        <div id="message" class="hidden">Find the 3 lost artifacts and defeat all enemies!</div>
+
+        <!-- Game Over Screen -->
+        <div id="game-over">
+            <h1 id="game-over-title"></h1>
+            <p id="game-over-text"></p>
+            <div class="stats">
+                <div id="final-artifacts"></div>
+                <div id="final-enemies"></div>
+                <div id="final-health"></div>
+            </div>
+            <button id="restart-btn">Play Again</button>
+        </div>
+    </div>
+
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Game Scripts -->
+    <script src="js/gameState.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/controls.js"></script>
+    <script src="js/world.js"></script>
+    <script src="js/entities.js"></script>
+    <script src="js/renderer.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
